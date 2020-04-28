@@ -29,8 +29,10 @@ To use this data, you can:
 -Use the THRESHOLD dat to trigger a video to change when the data is above this value.
 
 HOW TO EXTEND THIS NETWORK
+
 Software Extension: Some other things you might try include adding a timer CHOP, then using the callback to compare values every n seconds. This is useful if you need additional debouncing of your data in TouchDesigner. If you're more comfortable with CHOPs in general, you could use a select chop to select the data from the serial DAT, then manipulate that data as a channel. This network can be combined with my pixel visualizer to switch patterns for LED animations. It can also be used to manipulate visuals for live shows. Other sensors can also be used! Just upload the sensor library in Arduino, and make sure the data is being sent via Serial.println() with a delay. 
-Hardware Extension: You can use this network as a starter for creating your own tactile VJ interface! Just attach the pins on the Teensy to copper pads, conductive paint, spoons, bananas, anything conductive will work! Next, set up those pins to trigger different effects. 
+
+Hardware Extension: You can use this network as a starter for creating your own tactile VJ interface! Just attach the pins on the Teensy to copper pads, conductive fabric or thread or paint, spoons, bananas, or any other conductive material! Next, set up those pins to trigger different effects in your TouchDesigner network. For more on capacitive touch, see: https://www.bareconductive.com/make/what-is-capacitive-sensing/
 
 TROUBLESHOOTING
 

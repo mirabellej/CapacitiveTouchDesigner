@@ -1,7 +1,7 @@
 # CapacitiveTouchDesigner
 Gets capacitive touch data from Teensy (Arduino) and sends to TouchDesigner over Serial. 
 This data is then manipulated using Python scripts to switch between video feeds and edit ramp speed and shape.
-Can be used for live video manipulation using sensors. 
+Can be used for live video manipulation using sensors and to build tactile user interfaces. 
 
 For use with Teensy LC, 3.2, or 3.6 (Teensy 3.5 does not have built-in capacitive touch pins).
 Cap touch pins for Teensy: 0, 1, 15, 16, 17, 18, 19, 22, 23 // On Teensy 3.6: also pin 29, 30

@@ -32,7 +32,7 @@ Some other things you might try include adding a timer CHOP, then using the call
 
 TROUBLESHOOTING
 
-Problem: The data in TouchDesigner is coming in funny (i.e. the numbers are jamming together).
+Problem: The data in the serial1 DAT is coming in funny (i.e. the readings are running together or skipping lines).
 
 Solution: Make sure that in the TouchDesigner parameters for the serial1 DAT, you have Row/Callback Format set to "One Per Line." Another reason data corruption might happen is if you don't have a significant delay for print / read statements on the Arduino or TouchDesigner end. Try changing the delay between Serial.println() statements in Arduino to be greater than 100 milliseconds. If this is not possible, and you need a very quick read, I recommend sending but not printing the data over Serial. This can be done using the Serial.write() function. You can also send data using OSC, UDP, or TCP / IP. 
 

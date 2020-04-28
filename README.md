@@ -23,7 +23,7 @@ In TouchDesigner:
 3. Make sure the Active slider in the same DAT is toggled to On.
 4. You should see data streaming in. 
 
-To use this data, you can: write a Python script in the serial1_callbacks (see example in DAT) or the datexec1 (see example in DAT). You can change the THRESHOLD value if needed. 
+To use this data, you can write a Python script in the serial1_callbacks (see example in DAT) or the datexec1 (see example in DAT). You can change the value in the THRESHOLD DAT as needed. 
 
 HOW TO EXTEND THIS NETWORK
 

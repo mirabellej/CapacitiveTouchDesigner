@@ -1,7 +1,7 @@
 # CapacitiveTouchDesigner
 Gets capacitive touch data from Teensy (Arduino) and sends to TouchDesigner over Serial. 
 This data is then manipulated using Python scripts to switch between video feeds and edit ramp speed and shape.
-Can be used for live video manipulation using sensors! 
+Can be used for live video manipulation using sensors. 
 
 For use with Teensy LC, 3.2, or 3.6 (Teensy 3.5 does not have built-in capacitive touch pins).
 Cap touch pins for Teensy: 0, 1, 15, 16, 17, 18, 19, 22, 23 // On Teensy 3.6: also pin 29, 30
@@ -29,7 +29,8 @@ To use this data, you can:
 -Use the THRESHOLD dat to trigger a video to change when the data is above this value.
 
 HOW TO EXTEND THIS NETWORK
-Some other things you might try include adding a timer CHOP, then using the callback to compare values every n seconds. This is useful if you need additional debouncing of your data in TouchDesigner. If you're more comfortable with CHOPs in general, you could use a select chop to select the data from the serial DAT, then manipulate that data as a channel. This network can be combined with my pixel visualizer to switch patterns for LED animations. It can also be used to manipulate visuals for live shows. Other sensors can also be used! Just upload the sensor library in Arduino, and make sure the data is being sent via Serial.println() with a delay. 
+Software Extension: Some other things you might try include adding a timer CHOP, then using the callback to compare values every n seconds. This is useful if you need additional debouncing of your data in TouchDesigner. If you're more comfortable with CHOPs in general, you could use a select chop to select the data from the serial DAT, then manipulate that data as a channel. This network can be combined with my pixel visualizer to switch patterns for LED animations. It can also be used to manipulate visuals for live shows. Other sensors can also be used! Just upload the sensor library in Arduino, and make sure the data is being sent via Serial.println() with a delay. 
+Hardware Extension: You can use this network as a starter for creating your own tactile VJ interface! Just attach the pins on the Teensy to copper pads, conductive paint, spoons, bananas, anything conductive will work! Next, set up those pins to trigger different effects. 
 
 TROUBLESHOOTING
 

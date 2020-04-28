@@ -23,14 +23,11 @@ In TouchDesigner:
 3. Make sure the Active slider in the same DAT is toggled to On.
 4. You should see data streaming in. 
 
-To use this data, you can:
--Write a Python script in the serial1_callbacks (see example in DAT).
--Write a Python script in the datexec1 (see example in DAT).
--Use the THRESHOLD dat to trigger a video to change when the data is above this value.
+To use this data, you can: write a Python script in the serial1_callbacks (see example in DAT) or the datexec1 (see example in DAT). You can change the THRESHOLD value if needed. 
 
 HOW TO EXTEND THIS NETWORK
 
-Software Extension: Some other things you might try include adding a timer CHOP, then using the callback to compare values every n seconds. This is useful if you need additional debouncing of your data in TouchDesigner. If you're more comfortable with CHOPs in general, you could use a select chop to select the data from the serial DAT, then manipulate that data as a channel. This network can be combined with my pixel visualizer to switch patterns for LED animations. It can also be used to manipulate visuals for live shows. Other sensors can also be used! Just upload the sensor library in Arduino, and make sure the data is being sent via Serial.println() with a delay. 
+Software Extension: This network can be extended to include readings for multiple pins or sensors. Data can be sorted by addressing the coordinating row and column of the serial1 DAT. Some other things you might try include adding a timer CHOP, then using the timer's callback to compare values every n seconds. This is useful if you need additional debouncing of your data in TouchDesigner or timed events (for example, you might sync the timer to an audio track). If you're more comfortable with CHOPs in general, you could use a select chop to select the data from the serial DAT, then manipulate that data as a channel. This network can be combined with my pixel visualizer to switch patterns for LED animations. It can also be used to manipulate visuals for live shows. Other sensors can also be used! Just upload the sensor library in Arduino, and make sure the data is being sent via Serial.println() with a delay. 
 
 Hardware Extension: You can use this network as a starter for creating your own tactile VJ interface! Just attach the pins on the Teensy to copper pads, conductive fabric or thread or paint, spoons, bananas, or any other conductive material! Next, set up those pins to trigger different effects in your TouchDesigner network. For more on capacitive touch, see: https://www.bareconductive.com/make/what-is-capacitive-sensing/
 

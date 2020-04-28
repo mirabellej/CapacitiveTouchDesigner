@@ -1,7 +1,7 @@
 # CapacitiveTouchDesigner
 Gets capacitive touch data from Teensy (Arduino) and sends to TouchDesigner over Serial. 
 This data is then manipulated using Python scripts to switch between video feeds and edit ramp speed and shape.
-Can be used for live video manipulation using sensors and to build tactile user interfaces. 
+Can be used for live video manipulation based on sensor input and to build tactile user interfaces. 
 
 For use with Teensy LC, 3.2, or 3.6 (Teensy 3.5 does not have built-in capacitive touch pins).
 Cap touch pins for Teensy: 0, 1, 15, 16, 17, 18, 19, 22, 23 // On Teensy 3.6: also pin 29, 30
@@ -27,7 +27,7 @@ To use this data, you can write a Python script in the serial1_callbacks (see ex
 
 HOW TO EXTEND THIS NETWORK
 
-Software Extension: This network can be extended to include readings for multiple pins or sensors. Data can be sorted by addressing the coordinating row and column of the serial1 DAT. Some other things you might try include adding a timer CHOP, then using the timer's callback to compare values every n seconds. This is useful if you need additional debouncing of your data in TouchDesigner or timed events (for example, you might sync the timer to an audio track). If you're more comfortable with CHOPs in general, you could use a select chop to select the data from the serial DAT, then manipulate that data as a channel. This network can be combined with my pixel visualizer to switch patterns for LED animations. It can also be used to manipulate visuals for live shows. Other sensors can also be used! Just upload the sensor library in Arduino, and make sure the data is being sent via Serial.println() with a delay. 
+Software Extension: This network can be extended to include readings for multiple pins or sensors. Data can be distinguished and sorted by addressing the coordinating row and column of the serial1 DAT in your callback scripts. For timed events, you can include a timer CHOP, then use the timer's callback to compare values every n seconds. This is useful if you need additional debouncing of your data in TouchDesigner. If you're more comfortable with CHOPs in general, you could use a select chop to select the data from the serial DAT, then manipulate that data as a channel. This network can be combined with my pixel visualizer to switch patterns for LED animations. It can also be used to manipulate visuals for live shows. Other sensors can also be used! Just upload the sensor library in Arduino, and make sure the data is being sent via Serial.println() with a delay of at least 100 milliseconds. 
 
 Hardware Extension: You can use this network as a starter for creating your own tactile VJ interface! Just attach the pins on the Teensy to copper pads, conductive fabric or thread or paint, spoons, bananas, or any other conductive material! Next, set up those pins to trigger different effects in your TouchDesigner network. For more on capacitive touch, see: https://www.bareconductive.com/make/what-is-capacitive-sensing/
 

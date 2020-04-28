@@ -5,8 +5,8 @@ Can be used for live video manipulation based on sensor input and to build tacti
 
 HARDWARE
 For use with Teensy LC, 3.0, 3.2, or 3.6 (Teensy 3.5 does not have touch sensing).
-Cap touch pins for Teensy: 0, 1, 15, 16, 17, 18, 19, 22, 23 // On Teensy 3.6: also pin 29, 30
-Capacitive touch sensing is included in these pins on the Teensy, so no additional / exterior sensors are needed. 
+Cap touch pins for Teensy: 0, 1, 15, 16, 17, 18, 19, 22, 23 // On Teensy 3.6: also pin 29, 30. 
+Capacitive touch sensing is included in these pins on the Teensy. No additional / exterior sensors are needed. 
 
 INSTRUCTIONS
 
